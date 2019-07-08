@@ -6,80 +6,216 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Andrzej Kędzierski</title>
     <link
-      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="main.bundle.css">
+    <link rel="stylesheet" href="main.bundle.css" />
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
-        <h1 class="heading-primary">Andrzej Kędzierski</h1>
+        <h1 class="heading-primary">
+          <span class="main-heading">Andrzej Kędzierski</span>
+          <span hidden> - </span>
+          <span class="sub-heading">
+            Muzyka autorska, nagrania dżwiękowe, produkcja muzyczna.
+          </span>
+        </h1>
       </header>
+
       <main>
-        <section class="section-about">
-          <div class="section-about__picture-box">
-            <picture class="section-about__picture">
-              <source srcset="./images/ak-200.jpg 1x, ./images/ak-200.jpg 2x" media="(max-width: 320px)">
-              <img srcset="./images/ak-200.jpg 1x, ./images/ak-400.jpg 2x" alt="Andrzej Kędzierski" src="./images/ak.jpg">
-            </picture>
+        <section class="section-about" id="about">
+          <div class="about-box container container--with-line">
+            <div class="about-box__picture-box">
+              <picture class="about-box__picture">
+                <source
+                  srcset="./images/ak-166.jpg"
+                  media="(max-width: 600px)"
+                />
+                <source
+                  srcset="./images/ak-300.jpg"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/ak-600.jpg"
+                  media="(min-width: 1800px)"
+                />
+
+                <img
+                  srcset="./images/ak-200.jpg 1x, ./images/ak-400.jpg 2x"
+                  alt="Andrzej Kędzierski"
+                  src="./images/ak.jpg"
+                />
+              </picture>
+            </div>
+
+            <div class="about-box__info-box">
+              <p class="paragraph about-box__text">
+                Poszukiwacz dźwięku, kolekcjoner pogłosów. Twórca chilloutowych
+                klimatów. Możliwość tworzenia i… bilet sieciowy, dają mu
+                niezwykłe poczucie wolności. Najbardziej kręci go dobieranie
+                barw, mieszanie modulacji, szukanie nietypowych połączeń
+                brzmień.
+              </p>
+              <a href="#contact" class="btn">Kontakt</a>
+            </div>
           </div>
-          <p class="paragraph">
-            Poszukiwacz dźwięku, kolekcjoner pogłosów. Twórca chilloutowych
-            klimatów. W muzyce odnalazł przestrzeń dla siebie. Możliwość
-            tworzenia i …bilet sieciowy, dają mu niezwykłe poczucie wolności.
-            Najbardziej kręci go dobieranie barw, mieszanie modulacji, szukanie
-            nietypowych połączeń brzmień.
-          </p>
-          <a href="#" class="btn">Kontakt</a>
         </section>
-        <section class="section-links">
-          <h2 class="heading-secondary">Linki:</h2>
 
-          <a href="#" class="section-links__link">
-            <div class="section-links__icon-box">
-            <svg class="section-links__icon">
-              <use xlink:href="./images/sprite.svg#icon-bandcamp"></use>
-            </svg>
+        <section class="section-links" id="links">
+          <div class="container container--with-line">
+            <h2 class="heading-secondary">Linki:</h2>
+
+            <div class="links-box">
+              <a
+                href="http://www.andrzejkedzierski.bandcamp.com"
+                class="links-box__link"
+                target="_blank"
+              >
+                <div class="links-box__icon-box">
+                  <svg class="links-box__icon links-box__icon--bandcamp">
+                    <use xlink:href="./images/sprite.svg#icon-bandcamp"></use>
+                  </svg>
+                </div>
+                <h3 class="heading-tertiary">Bandcamp</h3>
+              </a>
+
+              <a
+                href="https://www.facebook.com/akkedzierski"
+                class="links-box__link"
+                target="_blank"
+              >
+                <div class="links-box__icon-box">
+                  <svg class="links-box__icon links-box__icon--facebook">
+                    <use xlink:href="./images/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </div>
+                <h3 class="heading-tertiary">Facebook</h3>
+              </a>
+
+              <a
+                href="https://www.youtube.com/AndrzejKedzierski"
+                class="links-box__link"
+                target="_blank"
+              >
+                <div class="links-box__icon-box">
+                  <svg class="links-box__icon links-box__icon--youtube">
+                    <use xlink:href="./images/sprite.svg#icon-youtube"></use>
+                  </svg>
+                </div>
+                <h3 class="heading-tertiary">Youtube</h3>
+              </a>
+
+              <a
+                href="https://www.instagram.com/andrzej_kedzierski"
+                class="links-box__link"
+                target="_blank"
+              >
+                <div class="links-box__icon-box">
+                  <svg class="links-box__icon links-box__icon--instagram">
+                    <use xlink:href="./images/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </div>
+                <h3 class="heading-tertiary">Instagram</h3>
+              </a>
             </div>
-            <h3 class="heading-tertiary">Bandcamp</h3>
-          </a>
-
-          <a href="#" class="section-links__link">
-                        <div class="section-links__icon-box">
-
-            <svg class="section-links__icon">
-              <use xlink:href="./images/sprite.svg#icon-facebook"></use>
-            </svg>
-            </div>
-            <h3 class="heading-tertiary">Facebook</h3>
-          </a>
-          
-          <a href="#" class="section-links__link">
-                        <div class="section-links__icon-box">
-
-            <svg class="section-links__icon">
-              <use xlink:href="./images/sprite.svg#icon-youtube"></use>
-            </svg>
-            </div>
-            <h3 class="heading-tertiary">Youtube</h3>
-          </a>
-
-          <a href="#" class="section-links__link">
-                        <div class="section-links__icon-box">
-
-            <svg class="section-links__icon">
-              <use xlink:href="./images/sprite.svg#icon-instagram"></use>
-            </svg>
-            </div>
-            <h3 class="heading-tertiary">Instagram</h3>
-          </a>
-
-          </section>
+          </div>
         </section>
-        <section class="section-contact"></section>
+
+        <section class="section-contact" id="contact">
+          <div class="container container--with-line">
+            <h2 class="heading-secondary">Kontakt:</h2>
+            <div class="contact-box">
+              <div class="contact-box__info">
+                <a
+                  href="mailto:andrzej.kedzierski@tlen.pl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact-box__link"
+                >
+                  <div class="contact-box__icon-box">
+                    <svg class="contact-box__icon">
+                      <use xlink:href="./images/sprite.svg#icon-envelope"></use>
+                    </svg>
+                  </div>
+                  andrzej.kedzierski@tlen.pl
+                </a>
+                <a href="tel:+48-507-934-947" class="contact-box__link">
+                  <div class="contact-box__icon-box">
+                    <svg class="contact-box__icon">
+                      <use xlink:href="./images/sprite.svg#icon-phone"></use>
+                    </svg>
+                  </div>
+                  507 934 947
+                </a>
+              </div>
+
+              <div class="contact-box__form">
+                <form
+                  action="https://formspree.io/andrzej.kedzierski@tlen.pl"
+                  method="POST"
+                  class="form"
+                >
+                  <fieldset class="form__group">
+                    <input
+                      class="form__input"
+                      type="text"
+                      placeholder="Twoje imię i nazwisko"
+                      name="name"
+                      id="name"
+                      required
+                    />
+                    <label for="name" class="form__label"
+                      >Twoje imię i nazwisko</label
+                    >
+                  </fieldset>
+                  <fieldset class="form__group">
+                    <input
+                      class="form__input"
+                      type="email"
+                      placeholder="Twój adres email"
+                      name="_replyto"
+                      class="contact-box__input"
+                      id="email"
+                      required
+                    />
+                    <label for="email" class="form__label"
+                      >Twój adres email</label
+                    >
+                  </fieldset>
+                  <fieldset class="form__group">
+                    <textarea
+                      class="form__input"
+                      rows="7"
+                      name="message"
+                      id="message"
+                      type="text"
+                      placeholder="Wiadomość"
+                      required
+                    ></textarea>
+                    <label for="message" class="form__label">Wiadomość</label>
+                  </fieldset>
+                  <input type="text" name="_gotcha" style="display:none" />
+                  <button type="submit" class="btn btn--small">
+                    Wyślij
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer></footer>
+
+      <footer>
+        <div class="container">
+          <span class="copy">
+            Wykonanie:
+            <a href="https://dominikmanowski.github.io/" class="link"
+              >Dominik Manowski</a
+            >
+          </span>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

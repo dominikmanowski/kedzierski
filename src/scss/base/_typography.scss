@@ -1,0 +1,85 @@
+.heading-primary {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+
+  @include respond(phone-small) {
+    font-size: 3rem;
+  }
+
+  @include respond(tab-land) {
+    font-size: 3.9rem;
+  }
+
+  @include respond(desk) {
+    font-size: 4.5rem;
+  }
+}
+
+.heading-secondary {
+  font-size: 3rem;
+  margin-bottom: 4rem;
+
+  @include respond(desk) {
+    font-size: 3.5rem;
+  }
+}
+
+.heading-tertiary {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.paragraph {
+  font-size: 1.4rem;
+  margin: 3rem;
+
+  @include respond(desk) {
+    font-size: 1.7rem;
+  }
+}
+
+.copy {
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+.link {
+  color: var(--color-primary-dark);
+}
+
+.main-heading {
+  display: inline-block;
+
+  @include respond(phone-small) {
+    letter-spacing: 0.2rem;
+  }
+
+  @include respond(tab-port) {
+    letter-spacing: 0.4rem;
+  }
+  @include respond(tab-land) {
+    letter-spacing: 0.8rem;
+  }
+}
+
+.sub-heading {
+  display: block;
+  font-size: 1.6rem;
+  color: var(--color-grey-dark-2);
+  margin-left: -0.8rem;
+
+  @include respond(phone) {
+    max-width: 33rem;
+    margin: 0 auto;
+  }
+
+  @include respond(tab-land) {
+    font-size: 1.7rem;
+  }
+
+  @include respond(desk) {
+    font-size: 1.9rem;
+    margin-top: -1rem;
+    margin-left: -0.2rem;
+  }
+}

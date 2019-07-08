@@ -1,0 +1,36 @@
+.container {
+  margin: 3rem 0;
+
+  &--with-line {
+    margin: 6rem 0;
+    padding-bottom: 6rem;
+    border-bottom: 1px solid var(--color-grey-light-4);
+  }
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 52rem;
+  background: var(--color-grey-light-1);
+  box-shadow: var(--shadow-dark);
+  border-radius: 7px;
+  padding: 3rem;
+  text-align: center;
+
+  @include respond(phone-small) {
+    padding: 2rem 1rem;
+  }
+
+  @include respond(tab-port) {
+    padding: 6rem;
+  }
+
+  @include respond(tab-land) {
+    max-width: 90rem;
+  }
+
+  @include respond(desk) {
+    max-width: 100rem;
+    padding: 8rem;
+  }
+}

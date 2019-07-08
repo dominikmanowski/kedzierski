@@ -1,7 +1,7 @@
 const { watch, src, dest, series, parallel } = require('gulp');
 const browserSync = require('browser-sync').create();
-const concat = require('gulp-concat');
-const uglify = require('gulp-uglify');
+// const concat = require('gulp-concat');
+// const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 const plumber = require('gulp-plumber');
 const del = require('del');
@@ -15,7 +15,7 @@ const paths = {
   app: {
     scss: './src/scss/**/*.scss',
     fonts: './src/fonts/*',
-    images: './src/images/*.*',
+    images: './src/images/**/*.*',
     html: './src/*.html',
   },
   dist: {
@@ -26,18 +26,18 @@ const paths = {
   extraBundles: './dist/main.css',
 };
 
-function jsTask(done) {
-  src(paths.app.js)
-    .pipe(
-      babel({
-        presets: ['@babel/preset-env'],
-      })
-    )
-    .pipe(concat('main.bundle.js'))
-    .pipe(uglify())
-    .pipe(dest(paths.dist.base));
-  done();
-}
+// function jsTask(done) {
+//   src(paths.app.js)
+//     .pipe(
+//       babel({
+//         presets: ['@babel/preset-env'],
+//       })
+//     )
+//     .pipe(concat('main.bundle.js'))
+//     .pipe(uglify())
+//     .pipe(dest(paths.dist.base));
+//   done();
+// }
 
 function cssTask(done) {
   src(paths.app.scss)
@@ -97,10 +97,10 @@ function cleanUp() {
 }
 
 function deploy() {
-  src(paths.dist.base).pipe(ghPages());
+  return src('./dist/**/*').pipe(ghPages());
 }
 
-exports.dev = parallel(
+exports.develop = parallel(
   cssTask,
   fontTask,
   imagesTask,
@@ -110,7 +110,7 @@ exports.dev = parallel(
 );
 exports.build = series(
   cleanUp,
-  parallel(jsTask, cssTask, fontTask, imagesTask, templateTask)
+  parallel(cssTask, fontTask, imagesTask, templateTask)
 );
 
-exports.deploy = series(deploy);
+exports.deploy = deploy;

@@ -1,0 +1,193 @@
+.about-box {
+  margin: 0 auto;
+
+  @include respond(tab-port) {
+    max-width: 55rem;
+  }
+  @include respond(tab-land) {
+    max-width: 70rem;
+  }
+
+  @include respond(desk) {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    // margin-left: -7rem;
+  }
+
+  &__picture-box {
+    @include circles(21rem);
+    margin: 0 auto 2rem;
+
+    @include respond(desk) {
+      margin-top: -9rem;
+      flex-grow: 0;
+      flex-shrink: 0;
+      @include circles(31rem);
+    }
+  }
+
+  &__picture {
+    display: block;
+    border-radius: 50%;
+    width: 20rem;
+    height: 20rem;
+    overflow: hidden;
+    position: relative;
+
+    @include respond(desk) {
+      width: 30rem;
+      height: 30rem;
+    }
+  }
+
+  &__info-box {
+    @include respond(desk) {
+      text-align: left;
+    }
+  }
+
+  &__text {
+    @include respond(desk) {
+      margin: 1rem 8rem 1rem 0;
+      max-width: 55rem;
+      font-size: 2rem;
+    }
+  }
+}
+
+.links-box {
+  display: grid;
+  place-items: center;
+  max-width: 50rem;
+  margin: 0 auto;
+
+  @include respond(tab-port) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 4rem;
+    grid-row-gap: 4rem;
+  }
+
+  @include respond(desk) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    max-width: 100%;
+  }
+
+  &__icon-box {
+    @include circles(15rem);
+
+    @include respond(phone-small) {
+      @include circles(11rem);
+    }
+
+    @include respond(tab-land) {
+      @include circles(16rem);
+    }
+  }
+
+  &__icon {
+    fill: var(--color-primary-dark);
+    width: 7rem;
+    height: 7rem;
+
+    &--bandcamp {
+      fill: rgba(#1da0c3, 0.8);
+    }
+
+    &--facebook {
+      fill: rgba(#3b5998, 0.8);
+    }
+
+    &--youtube {
+      fill: rgba(#f00, 0.8);
+    }
+
+    &--instagram {
+      fill: rgba(#e1306c, 0.8);
+    }
+
+    @include respond(tab-land) {
+      width: 10rem;
+      height: 10rem;
+    }
+  }
+}
+.contact-box {
+  @include respond(desk) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: -2rem;
+  }
+
+  &__info {
+    display: block;
+    font-size: 1.6rem;
+    margin-bottom: 6rem;
+
+    @include respond(desk) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+
+    &:not(:last-of-type) {
+      margin-bottom: 3rem;
+    }
+
+    @include respond(desk) {
+      flex-direction: column;
+      align-items: center;
+      font-size: 1.8rem;
+
+      &:not(:last-of-type) {
+        margin-bottom: 5rem;
+      }
+    }
+  }
+
+  &__icon {
+    fill: var(--color-primary-dark);
+    width: 2.3rem;
+    height: 2.3rem;
+    margin-bottom: -0.6rem;
+    margin-right: 0.6rem;
+
+    @include respond(desk) {
+      display: block;
+      margin: 0;
+      width: 8rem;
+      height: 8rem;
+    }
+  }
+
+  &__icon-box {
+    @include respond(desk) {
+      @include circles(16rem);
+    }
+  }
+
+  &__contact-box {
+    max-width: 31.4rem;
+    margin: 0 auto;
+  }
+
+  &__form {
+    @include respond(desk) {
+      padding: 3rem 6rem;
+    }
+  }
+}
+
+.heading-primary {
+  @include respond(desk) {
+    text-align: left;
+  }
+}

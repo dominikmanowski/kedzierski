@@ -1,0 +1,68 @@
+@mixin circles($size) {
+  width: $size;
+  height: $size;
+  border: var(--border-grey-light);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: $size + 1rem;
+    height: $size + 1rem;
+    border-radius: 50%;
+    border: var(--border-grey-light);
+  }
+}
+
+// Breakpoints
+/*
+
+0 - 320       Small phone            - small-phone 
+320 - 600     Phone - Normal styles  - phone
+600 - 900     Tablet portrait        - tab-port
+900 - 1200    Tablet landscape       - tab-land
+1200 - 1800   Desktop                - desk
+>1800         Big desktop            - desk-big
+
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == 'phone-small' {
+    @media (max-width: 320px) {
+      @content;
+    }
+  }
+  @if $breakpoint == 'phone' {
+    @media (max-width: 599px) {
+      @content;
+    }
+  }
+  @if $breakpoint == 'tab-port' {
+    @media (min-width: 600px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == 'tab-land' {
+    @media (min-width: 900px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == 'desk' {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == 'desk-big' {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  }
+}

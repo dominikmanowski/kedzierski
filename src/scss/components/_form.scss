@@ -1,0 +1,45 @@
+.form {
+  &__group {
+    display: block;
+    border: none;
+    margin-bottom: 1.5rem;
+
+    @include respond(desk) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    padding: 1.5rem 2rem;
+    border: 1px solid var(--color-grey-light-4);
+    transition: border 0.3s;
+
+    &:active,
+    &:focus {
+      outline: none;
+      border: 1px solid var(--color-primary-dark);
+    }
+
+    &:focus:invalid {
+      border: 1px solid var(--color-warning);
+    }
+  }
+  &__label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: left;
+    margin-left: 2.1rem;
+    transition: transform 0.3s, opacity 0.7s;
+  }
+
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+  }
+}
