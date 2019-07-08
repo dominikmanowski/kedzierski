@@ -191,3 +191,9 @@
     text-align: left;
   }
 }
+
+.copy {
+  @include respond(phone) {
+    margin-bottom: 3rem;
+  }
+}
