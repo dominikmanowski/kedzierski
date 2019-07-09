@@ -61,7 +61,7 @@
   max-width: 50rem;
   margin: 0 auto;
 
-  @include respond(tab-port) {
+  @include respond(tab-land) {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 4rem;
@@ -76,10 +76,6 @@
 
   &__icon-box {
     @include circles(15rem);
-
-    @include respond(phone-small) {
-      @include circles(11rem);
-    }
 
     @include respond(tab-land) {
       @include circles(16rem);
@@ -120,7 +116,7 @@
   margin: 0 auto;
   grid-row-gap: 4rem;
 
-  @include respond(tab-port) {
+  @include respond(tab-land) {
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 4rem;
   }
@@ -166,9 +162,9 @@
   &__icon-box {
     @include circles(15rem);
 
-    @include respond(phone-small) {
-      @include circles(11rem);
-    }
+    // @include respond(phone-small) {
+    //   @include circles(11rem);
+    // }
 
     @include respond(tab-land) {
       @include circles(16rem);
@@ -179,9 +175,9 @@
     position: absolute;
     top: 16rem;
 
-    @include respond(phone-small) {
-      top: 12.5rem;
-    }
+    // @include respond(phone-small) {
+    //   top: 12.5rem;
+    // }
 
     @include respond(tab-land) {
       top: 17.5rem;
