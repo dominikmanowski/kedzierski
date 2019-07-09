@@ -12,12 +12,11 @@
     max-width: 100%;
     display: flex;
     flex-direction: row-reverse;
-    // margin-left: -7rem;
   }
 
   &__picture-box {
     @include circles(21rem);
-    margin: 0 auto 2rem;
+    margin: 6rem auto;
 
     @include respond(desk) {
       margin-top: -9rem;
@@ -115,10 +114,19 @@
   }
 }
 .contact-box {
-  @include respond(desk) {
-    display: grid;
+  display: grid;
+  place-items: center;
+  max-width: 50rem;
+  margin: 0 auto;
+  grid-row-gap: 4rem;
+
+  @include respond(tab-port) {
     grid-template-columns: repeat(2, 1fr);
-    margin-top: -2rem;
+    grid-column-gap: 4rem;
+  }
+
+  @include respond(desk) {
+    max-width: 42rem;
   }
 
   &__info {
@@ -135,30 +143,20 @@
   }
 
   &__link {
+    font-size: 1.8rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-
-    &:not(:last-of-type) {
-      margin-bottom: 3rem;
-    }
+    align-items: center;
 
     @include respond(desk) {
-      flex-direction: column;
-      align-items: center;
-      font-size: 1.8rem;
-
-      &:not(:last-of-type) {
-        margin-bottom: 5rem;
-      }
     }
   }
 
   &__icon {
     fill: var(--color-primary-dark);
-    width: 2.3rem;
-    height: 2.3rem;
-    margin-bottom: -0.6rem;
-    margin-right: 0.6rem;
+    width: 7rem;
+    height: 7rem;
 
     @include respond(desk) {
       display: block;
@@ -169,20 +167,12 @@
   }
 
   &__icon-box {
-    @include respond(desk) {
-      @include circles(16rem);
-    }
+    @include circles(16rem);
   }
 
   &__contact-box {
     max-width: 31.4rem;
     margin: 0 auto;
-  }
-
-  &__form {
-    @include respond(desk) {
-      padding: 3rem 6rem;
-    }
   }
 }
 
