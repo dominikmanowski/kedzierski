@@ -83,3 +83,12 @@
     margin-left: -0.2rem;
   }
 }
+
+.contact-box__text {
+  font-size: 1.6rem;
+  font-weight: 700;
+
+  @include respond(tab-land) {
+    font-size: 2rem;
+  }
+}

@@ -143,14 +143,12 @@
   }
 
   &__link {
-    font-size: 1.8rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    @include respond(desk) {
-    }
+    margin-bottom: 4rem;
+    position: relative;
   }
 
   &__icon {
@@ -160,19 +158,34 @@
 
     @include respond(desk) {
       display: block;
-      margin: 0;
       width: 8rem;
       height: 8rem;
     }
   }
 
   &__icon-box {
-    @include circles(16rem);
+    @include circles(15rem);
+
+    @include respond(phone-small) {
+      @include circles(11rem);
+    }
+
+    @include respond(tab-land) {
+      @include circles(16rem);
+    }
   }
 
-  &__contact-box {
-    max-width: 31.4rem;
-    margin: 0 auto;
+  &__text {
+    position: absolute;
+    top: 16rem;
+
+    @include respond(phone-small) {
+      top: 12.5rem;
+    }
+
+    @include respond(tab-land) {
+      top: 17.5rem;
+    }
   }
 }
 
