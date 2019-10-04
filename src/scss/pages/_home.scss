@@ -41,6 +41,7 @@
   }
 
   &__info-box {
+    min-width: 60%;
     @include respond(desk) {
       text-align: left;
     }
@@ -52,6 +53,9 @@
       max-width: 55rem;
       font-size: 2rem;
     }
+  }
+  &__br {
+    display: block;
   }
 }
 
